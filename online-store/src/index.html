@@ -6,23 +6,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Store</title>
 </head>
-<body>
+<body class="body">
   <header class="header">
     <div class="logo">
-
+      Online Store
     </div>
     <nav class="menu">
-
+      menu
     </nav>
     <div class="card__container">
-
+      <img src="./img/cart.png" width="30" alt="cart icon">
+      <div class="product-in-cart-count">15</div>
     </div>
   </header>
   <main class="main">
-    
+    <aside class="filters__container">
+      <h2 class="filter-header">Filters</h2>
+      <div class="range-filters">
+        <div id="stock-filter" class="range-filter"></div>
+        <div id="stock-filter-value" class="stock-filter-value"></div>
+        <div id="year-filter" class="range-filter"></div>
+        <div id="year-filter-value" class="year-filter-value"></div>
+      </div>
+    </aside>
+    <section class="products">
+      <div class="product">
+        <img src="./img/product-img/xiaomi11pro-w.jpg" alt="" class="product-img">
+        <div class="product__description">
+          <p class="product-brand">Xiaomi</p>
+          <h3 class="product-title">Xiaomi 11 Pro</h3>
+          <div class="product-attributes">
+            <p class="product-attribute product-color-attibute">Color: White</p>
+            <p class="product-attribute product-year-attribute">Year: 2021</p>
+            <p class="product-attribute product-memory-size-attribute">256 GB</p>
+          </div>
+          <div class="product-info">
+            <div class="product-price">$159</div>
+            <div class="product-in-stock">In stock: <span class="instock-number">25</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="product">
+        <img src="./img/xiaomi11pro-w.jpg" alt="" class="card-img">
+        <div class="product__description">
+          <p class="product-brand">Xiaomi</p>
+          <h3 class="product-title">Xiaomi 11 Pro</h3>
+          <div class="product-attributes">
+            <p class="product-attribute product-color-attibute">Color: White</p>
+            <p class="product-attribute product-year-attribute">Year: 2021</p>
+            <p class="product-attribute product-memory-size-attribute">256 GB</p>
+          </div>
+          <div class="product-info">
+            <div class="product-price">$159</div>
+            <div class="product-in-stock">In stock: <span class="instock-number">25</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="./img/xiaomi11pro-w.jpg" alt="" class="card-img">
+        <div class="product__description">
+          <p class="product-brand">Xiaomi</p>
+          <h3 class="product-title">Xiaomi 11 Pro</h3>
+          <div class="product-attributes">
+            <p class="product-attribute product-color-attibute">Color: White</p>
+            <p class="product-attribute product-year-attribute">Year: 2021</p>
+            <p class="product-attribute product-memory-size-attribute">256 GB</p>
+          </div>
+          <div class="product-info">
+            <div class="product-price">$159</div>
+            <div class="product-in-stock">In stock: <span class="instock-number">25</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="./img/xiaomi11pro-w.jpg" alt="" class="card-img">
+        <div class="product__description">
+          <p class="product-brand">Xiaomi</p>
+          <h3 class="product-title">Xiaomi 11 Pro</h3>
+          <div class="product-attributes">
+            <p class="product-attribute product-color-attibute">Color: White</p>
+            <p class="product-attribute product-year-attribute">Year: 2021</p>
+            <p class="product-attribute product-memory-size-attribute">256 GB</p>
+          </div>
+          <div class="product-info">
+            <div class="product-price">$159</div>
+            <div class="product-in-stock">In stock: <span class="instock-number">25</span></div>
+          </div>
+        </div>
+      </div> -->
+    </section>
   </main>
   <footer class="footer">
-
+    <p>Footer</p>
   </footer>
 </body>
 </html>
