@@ -12,6 +12,7 @@ export class Cards implements IDataRenderToPage {
     products.forEach((product: ProductData) => {
       const card: HTMLElement = document.createElement('div') as HTMLElement;
       card.classList.add('product');
+      card.setAttribute('data-id', `${product.id}`);
 
       const img: HTMLImageElement = document.createElement('img') as HTMLImageElement;
       img.classList.add('product-img');
@@ -57,11 +58,15 @@ export class Cards implements IDataRenderToPage {
       inStock.classList.add('product-in-stock');
       inStock.innerHTML = `In stock: <span class="instock-number">${product.stock}</span>`;
 
+      const cartButton = document.createElement('div') as HTMLDivElement;
+      cartButton.classList.add('cart-btn');
+      cartButton.innerHTML = `<img class = "cart-icon" src = "./img/cartv.png">`;
+
       attributes.append(color, year, memory);
       info.append(price, inStock);
       description.append(brand, title, attributes, info);
 
-      card.append(img, description);
+      card.append(img, description, cartButton);
       result.append(card);
     });
 
