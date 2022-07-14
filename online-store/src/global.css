@@ -47,17 +47,29 @@
 }
 
 .filters__container {
+  display: flex;
   width: 22%;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+
+.main__section {
+  width: 78%;
   padding: 1.5rem;
 }
 
+.main__section-sort {
+  padding-bottom: 1.5rem;
+}
+
 .products {
-  width: 78%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1.5rem;
+ 
   row-gap: 1rem;
 }
 
@@ -195,7 +207,32 @@
   color: var(--secondary-color);
 }
 
-.card__container{
+
+/*Attribute filters */
+
+.attributes-filters {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+legend {
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.checkbox-input {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  padding: 0.2rem;
+}
+
+
+
+/*Cart*/
+
+.cart__container{
     width: 4rem;
     height: 4rem;
     display: flex;

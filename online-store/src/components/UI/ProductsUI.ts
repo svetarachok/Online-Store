@@ -1,10 +1,10 @@
-import { ProductData } from './data-interfaces';
+import { ProductData } from '../Data/data-interfaces';
 
 export interface IDataRenderToPage {
   displayCards(data: ProductData[]): void;
 }
 
-export class Cards implements IDataRenderToPage {
+export class ProductsUI implements IDataRenderToPage {
   displayCards(products: ProductData[]): HTMLElement {
     const result = document.createElement('section') as HTMLElement;
     result.classList.add('products');

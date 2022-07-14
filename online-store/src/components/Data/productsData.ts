@@ -1,4 +1,6 @@
-export const products = [
+import { ProductData } from './data-interfaces';
+
+export const products: ProductData[] = [
   {
     id: '1',
     title: 'Xiaomi 11 Pro',
