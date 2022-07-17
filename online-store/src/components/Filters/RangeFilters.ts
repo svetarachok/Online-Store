@@ -1,49 +1,92 @@
-// import 'nouislider/dist/nouislider.css';
-// import * as noUiSlider from 'nouislider';
-// import { ProductData } from '../Data/data-interfaces';
+import 'nouislider/dist/nouislider.css';
+import * as noUiSlider from 'nouislider';
+import { ProductData } from '../Data/data-interfaces';
+export class RangeFilters {
+  createRangeFilter(
+    products: ProductData[],
+    filterDivID: string,
+    filterElem: noUiSlider.target,
+    value: keyof ProductData
+  ) {
+    const minRange: number = this.findMinRange(products, value);
+    const maxRange: number = this.findMaxRange(products, value);
+    const rangeDiv: HTMLDivElement = document.querySelector(filterDivID) as HTMLDivElement;
+    const input0: HTMLInputElement = rangeDiv.querySelector('#input0') as HTMLInputElement;
+    const input1: HTMLInputElement = rangeDiv.querySelector('#input1') as HTMLInputElement;
 
-// export class RangeFilters {
-//   constructor(public selector: string) {
-//     this.selector = selector;    
-//   }
+    if (!filterElem || !input0 || !input1) return;
 
-//   getRangeFilter(selector: string) {
-//     selector = this.selector;
-//     const rangeFilter: noUiSlider.target = document.getElementById(`.${selector}`) as noUiSlider.target;
-//     return rangeFilter;
-//   }
+    noUiSlider.create(filterElem, {
+      start: [minRange, maxRange],
+      connect: true,
+      step: 1,
+      range: {
+        min: minRange,
+        max: maxRange,
+      },
+    });
 
-//   createRangeFilter(filter, maxRange, minRange) {
+    input0.value = this.findMinRange(products, value).toString();
+    input1.value = this.findMaxRange(products, value).toString();
+    const inputs: [HTMLInputElement, HTMLInputElement] = [input0, input1];
 
-//   }
+    filterElem.noUiSlider?.on('change', (values, handle: number) => {
+      inputs[handle].value = Math.round(+values[handle]).toString();
+    });
 
-//   findmaxRange() {
+    input0.addEventListener('change', function () {
+      filterElem.noUiSlider?.set([this.value, input1.value]);
+    });
 
-//   }
+    input1.addEventListener('change', function () {
+      filterElem.noUiSlider?.set([input0.value, this.value]);
+    });
+  }
 
-//   findMinRange() {
+  public handleRangeEvents(filterElem: noUiSlider.target, dataSelector: string) {
+    filterElem.noUiSlider?.on('change', (values) => {
+      const [minValue, maxValue]: (string | number)[] = values;
+      const allProducts = document.querySelectorAll('.product');
+      allProducts.forEach((product) => {
+        const data = product.querySelector(dataSelector)?.innerHTML;
+        const dataNumber = Number(data);
+        if (dataNumber < Math.round(Number(minValue)) || dataNumber > Math.round(Number(maxValue))) {
+          product.classList.add('hidden');
+        } else {
+          product.classList.remove('hidden');
+        }
+      });
+    });
+  }
 
-//   }
+  public findMinRange(products: ProductData[], searchValue: keyof ProductData) {
+    const sortedProducts: ProductData[] = products.sort((a, b): number => {
+      if (Number(a[searchValue]) > Number(b[searchValue])) {
+        return 1;
+      }
+      if (Number(a[searchValue]) < Number(b[searchValue])) {
+        return -1;
+      }
+      return 0;
+    });
+    const minProduct = sortedProducts[0];
+    const number = minProduct[searchValue];
+    return Number(number);
+  }
 
-//   resetRangeFilter() {
-
-//   }
-
-// }
-
-// const priceSlider = document.getElementById('stock-filter') as noUiSlider.target;
-
-// noUiSlider.create(priceSlider, {
-//   start: [0, 500],
-//   snap: true,
-//   connect: true,
-//   range: {
-//     min: 0,
-//     '10%': 50,
-//     '20%': 100,
-//     '30%': 150,
-//     '40%': 500,
-//     '50%': 800,
-//     max: 1000,
-//   },
-// });
+  public findMaxRange(products: ProductData[], searchValue: keyof ProductData) {
+    const sortedProducts: ProductData[] = products.sort((a, b): number => {
+      if (Number(a[searchValue]) < Number(b[searchValue])) {
+        return 1;
+      }
+      if (Number(a[searchValue]) > Number(b[searchValue])) {
+        return -1;
+      }
+      return 0;
+    });
+    const maxProduct = sortedProducts[0];
+    const number = maxProduct[searchValue];
+    return Number(number);
+  }
+  // resetRangeFilter() {}
+}

@@ -22,11 +22,34 @@
   <main class="main">
     <aside class="filters__container">
       <h2 class="filter-header">Filters</h2>
-      <div class="range-filters">
-        <div id="stock-filter" class="range-filter"></div>
-        <div id="stock-filter-value" class="stock-filter-value"></div>
-        <div id="year-filter" class="range-filter"></div>
-        <div id="year-filter-value" class="year-filter-value"></div>
+      <div class="range-filters">  
+        <div id="stock-filter" class="range-filter">
+          <div id="stock-filter-slider"></div>
+          <div class="stock-filter-inputs">
+            <label class="stock-filter-label">
+              <span class="stock-filter-label_text">
+                In stock: 
+              </span>
+              <input type="number" placeholder="0" class="stock-filter-input0" id="input0">
+              <span class="stock-filter-input_text"> - </span>
+              <input type="number" placeholder="100" class="stock-filter-input1" id="input1">
+            </label>
+          </div>
+        </div>
+        <div id="year-filter" class="range-filter">
+          <div id="year-filter-slider"></div>
+          <div class="year-filter-inputs">
+            <label class="year-filter-label">
+              <span class="year-filter-label_text">
+                Year: 
+              </span>
+              <input type="number" placeholder="2018" class="year-filter-input0" id="input0">
+              <span class="year-filter-input_text"> - </span>
+              <input type="number" placeholder="2022" class="year-filter-input1" id="input1">
+            </label>
+          </div>
+        </div>
+        
       </div>
       <div class="rated-filter"></div>
       <div class="attributes-filters">
@@ -98,11 +121,11 @@
         <div class="sorting-container">
           <p>Sort Order:</p>
           <select class="sort-order">
-            <option value="">---</option>
-            <option value="asc">Title Ascending</option>
-            <option value="desc">Title Descending</option>
-            <option value="desc">Year Ascending</option>
-            <option value="desc">Year Descending</option>
+            <option value="id">---</option>
+            <option value="title-ascending">Title Ascending</option>
+            <option value="title-descending">Title Descending</option>
+            <option value="year-ascending">Year Ascending</option>
+            <option value="year-descending">Year Descending</option>
           </select>
         </div>
       </div>

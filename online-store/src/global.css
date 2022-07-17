@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,400&display=swap');
+@import 'nouislider/dist/nouislider.css';
 
 :root {
   --main-color: #211f1c;
@@ -135,6 +136,10 @@
   filter: grayscale(100%);
 }
 
+.hidden {
+  display: none;
+}
+
 .cart-btn {
   box-shadow: 0px 1px 4px 1px rgb(50 50 71 / 15%);
   width: 40px;
@@ -166,6 +171,7 @@
 
 .range-filters {
   padding-top: 2rem;
+  width: 240px;
 }
 
 #stock-filter,
@@ -203,15 +209,34 @@
     display: none;
 }
 
-.stock-filter-value {
-  padding-top: 0.5rem;
-}
-.stock-filter-value::before {
-  content: 'In Stock';
-  font-size: 14px;
-  color: var(--secondary-color);
+.stock-filter-inputs, .year-filter-inputs {
+  padding: 1rem 0;
 }
 
+.stock-filter-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 240px;
+}
+
+.stock-filter-input0, .stock-filter-input1, .year-filter-input0, .year-filter-input1 {
+  border: none;
+  padding: 5px;
+  width: 70px;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#year-filter {
+  padding-top: 2rem;
+}
+.year-filter-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 /*Attribute filters */
 

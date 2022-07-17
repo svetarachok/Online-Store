@@ -17,7 +17,7 @@ export class ProductsUI implements IDataRenderToPage {
     products.forEach((product: ProductData) => {
       const card: HTMLElement = document.createElement('div') as HTMLElement;
       card.classList.add('product');
-      card.setAttribute('data-id', `${product.id}`);
+      card.setAttribute('id', `${product.id}`);
 
       const img: HTMLImageElement = document.createElement('img') as HTMLImageElement;
       img.classList.add('product-img');
@@ -45,7 +45,7 @@ export class ProductsUI implements IDataRenderToPage {
       const year = document.createElement('p') as HTMLParagraphElement;
       year.classList.add('product-attribute');
       year.classList.add('product-year-attribute');
-      year.innerHTML = `Year: ${product.year}`;
+      year.innerHTML = `Year: <span class="year-number">${product.year}</span>`;
 
       const memory = document.createElement('p') as HTMLParagraphElement;
       memory.classList.add('product-attribute');
