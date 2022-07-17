@@ -4,7 +4,7 @@ export interface imageData {
 
 export interface AttributesData {
   color: string;
-  year: string;
+  brand: string;
   memory: string;
 }
 
@@ -13,7 +13,7 @@ export interface ProductData {
   title: string;
   stock: string;
   price: string;
-  brand: string;
+  year: string;
   attributes: AttributesData;
   image: imageData;
 }

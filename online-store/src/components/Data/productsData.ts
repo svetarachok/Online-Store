@@ -6,10 +6,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi 11 Pro',
     stock: '25',
     price: '159',
-    brand: 'Xiaomi',
+    year: '2020',
     attributes: {
       color: 'white',
-      year: '2020',
+      brand: 'Xiaomi',
       memory: '64',
     },
     image: {
@@ -21,10 +21,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi 12 Pro',
     stock: '120',
     price: '500',
-    brand: 'Xiaomi',
+    year: '2021',
     attributes: {
       color: 'blue',
-      year: '2021',
+      brand: 'Xiaomi',
       memory: '128',
     },
     image: {
@@ -36,10 +36,10 @@ export const products: ProductData[] = [
     title: 'iPhone SE',
     stock: '340',
     price: '300',
-    brand: 'Apple',
+    year: '2020',
     attributes: {
       color: 'white',
-      year: '2020',
+      brand: 'Apple',
       memory: '64',
     },
     image: {
@@ -51,10 +51,10 @@ export const products: ProductData[] = [
     title: 'iPhone 13 Pro Max',
     stock: '10',
     price: '1500',
-    brand: 'Apple',
+    year: '2021',
     attributes: {
       color: 'blue',
-      year: '2021',
+      brand: 'Apple',
       memory: '265',
     },
     image: {
@@ -66,10 +66,10 @@ export const products: ProductData[] = [
     title: 'iPhone 13 Pro Max',
     stock: '15',
     price: '1500',
-    brand: 'Apple',
+    year: '2021',
     attributes: {
       color: 'gold',
-      year: '2021',
+      brand: 'Apple',
       memory: '256',
     },
     image: {
@@ -81,10 +81,10 @@ export const products: ProductData[] = [
     title: 'Galaxy Note 20 Ultra',
     stock: '42',
     price: '900',
-    brand: 'Samsung',
+    year: '2022',
     attributes: {
       color: 'white',
-      year: '2022',
+      brand: 'Samsung',
       memory: '256',
     },
     image: {
@@ -96,10 +96,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi 12 Pro',
     stock: '320',
     price: '500',
-    brand: 'Xiaomi',
+    year: '2021',
     attributes: {
       color: 'green',
-      year: '2021',
+      brand: 'Xiaomi',
       memory: '256',
     },
     image: {
@@ -111,10 +111,10 @@ export const products: ProductData[] = [
     title: 'Galaxy A53',
     stock: '70',
     price: '700',
-    brand: 'Samsung',
+    year: '2021',
     attributes: {
       color: 'blue',
-      year: '2021',
+      brand: 'Samsung',
       memory: '128',
     },
     image: {
@@ -126,10 +126,10 @@ export const products: ProductData[] = [
     title: 'Galaxy A53',
     stock: '70',
     price: '700',
-    brand: 'Samsung',
+    year: '2021',
     attributes: {
       color: 'gold',
-      year: '2021',
+      brand: 'Samsung',
       memory: '128',
     },
     image: {
@@ -141,10 +141,10 @@ export const products: ProductData[] = [
     title: 'iPhone 13 Pro Max',
     stock: '15',
     price: '1500',
-    brand: 'Apple',
+    year: '2021',
     attributes: {
       color: 'green',
-      year: '2021',
+      brand: 'Apple',
       memory: '256',
     },
     image: {
@@ -156,10 +156,10 @@ export const products: ProductData[] = [
     title: 'iPhone 13 Pro Max',
     stock: '15',
     price: '1500',
-    brand: 'Apple',
+    year: '2021',
     attributes: {
       color: 'black',
-      year: '2021',
+      brand: 'Apple',
       memory: '256',
     },
     image: {
@@ -171,10 +171,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi 12 Pro',
     stock: '120',
     price: '500',
-    brand: 'Xiaomi',
+    year: '2021',
     attributes: {
       color: 'pink',
-      year: '2021',
+      brand: 'Xiaomi',
       memory: '256',
     },
     image: {
@@ -186,10 +186,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi Mi 11T',
     stock: '62',
     price: '400',
-    brand: 'Xiaomi',
+    year: '2019',
     attributes: {
       color: 'black',
-      year: '2019',
+      brand: 'Xiaomi',
       memory: '64',
     },
     image: {
@@ -201,10 +201,10 @@ export const products: ProductData[] = [
     title: 'Xiaomi 11 Lite',
     stock: '56',
     price: '350',
-    brand: 'Xiaomi',
+    year: '2019',
     attributes: {
       color: 'blue',
-      year: '2019',
+      brand: 'Xiaomi',
       memory: '128',
     },
     image: {
@@ -216,10 +216,10 @@ export const products: ProductData[] = [
     title: 'Galaxy Note 20',
     stock: '195',
     price: '600',
-    brand: 'Samsung',
+    year: '2022',
     attributes: {
       color: 'pink',
-      year: '2022',
+      brand: 'Samsung',
       memory: '256',
     },
     image: {
@@ -231,10 +231,10 @@ export const products: ProductData[] = [
     title: 'Galaxy Flip3',
     stock: '35',
     price: '640',
-    brand: 'Samsung',
+    year: '2022',
     attributes: {
       color: 'gold',
-      year: '2022',
+      brand: 'Samsung',
       memory: '256',
     },
     image: {
@@ -246,10 +246,10 @@ export const products: ProductData[] = [
     title: 'Galaxy Flip3',
     stock: '25',
     price: '640',
-    brand: 'Samsung',
+    year: '2022',
     attributes: {
       color: 'black',
-      year: '2022',
+      brand: 'Samsung',
       memory: '256',
     },
     image: {
@@ -261,10 +261,10 @@ export const products: ProductData[] = [
     title: 'iPhone 13',
     stock: '168',
     price: '1200',
-    brand: 'Apple',
+    year: '2021',
     attributes: {
       color: 'pink',
-      year: '2021',
+      brand: 'Apple',
       memory: '128',
     },
     image: {
@@ -276,10 +276,10 @@ export const products: ProductData[] = [
     title: 'iPhone 12',
     stock: '168',
     price: '1200',
-    brand: 'Apple',
+    year: '2020',
     attributes: {
       color: 'purple',
-      year: '2020',
+      brand: 'Apple',
       memory: '64',
     },
     image: {
@@ -291,10 +291,10 @@ export const products: ProductData[] = [
     title: 'Galaxy Note FE',
     stock: '43',
     price: '520',
-    brand: 'Samsung',
+    year: '2018',
     attributes: {
       color: 'gold',
-      year: '2018',
+      brand: 'Samsung',
       memory: '64',
     },
     image: {
@@ -306,10 +306,10 @@ export const products: ProductData[] = [
     title: 'Galaxy A53',
     stock: '122',
     price: '700',
-    brand: 'Samsung',
+    year: '2021',
     attributes: {
       color: 'white',
-      year: '2021',
+      brand: 'Samsung',
       memory: '256',
     },
     image: {

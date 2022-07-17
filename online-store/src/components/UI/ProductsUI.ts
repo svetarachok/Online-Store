@@ -1,10 +1,15 @@
 import { ProductData } from '../Data/data-interfaces';
 
 export interface IDataRenderToPage {
-  displayCards(data: ProductData[]): void;
+  products: ProductData[];
+  displayCards(data: ProductData[]): HTMLElement;
+  updateCards(data: ProductData[]): ProductData[];
 }
-
 export class ProductsUI implements IDataRenderToPage {
+  constructor(public products: ProductData[]) {
+    this.products = products;
+  }
+
   displayCards(products: ProductData[]): HTMLElement {
     const result = document.createElement('section') as HTMLElement;
     result.classList.add('products');
@@ -23,7 +28,7 @@ export class ProductsUI implements IDataRenderToPage {
 
       const brand = document.createElement('p') as HTMLParagraphElement;
       brand.classList.add('product-brand');
-      brand.innerHTML = `${product.brand}`;
+      brand.innerHTML = `${product.attributes.brand}`;
 
       const title = document.createElement('h3') as HTMLHeadingElement;
       title.classList.add('product-title');
@@ -40,7 +45,7 @@ export class ProductsUI implements IDataRenderToPage {
       const year = document.createElement('p') as HTMLParagraphElement;
       year.classList.add('product-attribute');
       year.classList.add('product-year-attribute');
-      year.innerHTML = `Year: ${product.attributes.year}`;
+      year.innerHTML = `Year: ${product.year}`;
 
       const memory = document.createElement('p') as HTMLParagraphElement;
       memory.classList.add('product-attribute');
@@ -71,5 +76,10 @@ export class ProductsUI implements IDataRenderToPage {
     });
 
     return result;
+  }
+
+  updateCards(updatedProducts: ProductData[]) {
+    this.products = updatedProducts;
+    return this.products;
   }
 }
