@@ -7,6 +7,7 @@ export const products: ProductData[] = [
     stock: '25',
     price: '159',
     year: '2020',
+    rated: '',
     attributes: {
       color: 'white',
       brand: 'Xiaomi',
@@ -22,6 +23,7 @@ export const products: ProductData[] = [
     stock: '120',
     price: '500',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'blue',
       brand: 'Xiaomi',
@@ -37,6 +39,7 @@ export const products: ProductData[] = [
     stock: '340',
     price: '300',
     year: '2020',
+    rated: '',
     attributes: {
       color: 'white',
       brand: 'Apple',
@@ -52,6 +55,7 @@ export const products: ProductData[] = [
     stock: '10',
     price: '1500',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'blue',
       brand: 'Apple',
@@ -67,6 +71,7 @@ export const products: ProductData[] = [
     stock: '15',
     price: '1500',
     year: '2021',
+    rated: '',
     attributes: {
       color: 'gold',
       brand: 'Apple',
@@ -82,6 +87,7 @@ export const products: ProductData[] = [
     stock: '42',
     price: '900',
     year: '2022',
+    rated: '',
     attributes: {
       color: 'white',
       brand: 'Samsung',
@@ -97,6 +103,7 @@ export const products: ProductData[] = [
     stock: '320',
     price: '500',
     year: '2021',
+    rated: '',
     attributes: {
       color: 'green',
       brand: 'Xiaomi',
@@ -112,6 +119,7 @@ export const products: ProductData[] = [
     stock: '70',
     price: '700',
     year: '2021',
+    rated: '',
     attributes: {
       color: 'blue',
       brand: 'Samsung',
@@ -127,6 +135,7 @@ export const products: ProductData[] = [
     stock: '70',
     price: '700',
     year: '2021',
+    rated: '',
     attributes: {
       color: 'gold',
       brand: 'Samsung',
@@ -142,6 +151,7 @@ export const products: ProductData[] = [
     stock: '15',
     price: '1500',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'green',
       brand: 'Apple',
@@ -157,6 +167,7 @@ export const products: ProductData[] = [
     stock: '15',
     price: '1500',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'black',
       brand: 'Apple',
@@ -172,6 +183,7 @@ export const products: ProductData[] = [
     stock: '120',
     price: '500',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'pink',
       brand: 'Xiaomi',
@@ -187,6 +199,7 @@ export const products: ProductData[] = [
     stock: '62',
     price: '400',
     year: '2019',
+    rated: '',
     attributes: {
       color: 'black',
       brand: 'Xiaomi',
@@ -202,6 +215,7 @@ export const products: ProductData[] = [
     stock: '56',
     price: '350',
     year: '2019',
+    rated: '',
     attributes: {
       color: 'blue',
       brand: 'Xiaomi',
@@ -217,6 +231,7 @@ export const products: ProductData[] = [
     stock: '195',
     price: '600',
     year: '2022',
+    rated: '',
     attributes: {
       color: 'pink',
       brand: 'Samsung',
@@ -232,6 +247,7 @@ export const products: ProductData[] = [
     stock: '35',
     price: '640',
     year: '2022',
+    rated: '',
     attributes: {
       color: 'gold',
       brand: 'Samsung',
@@ -247,6 +263,7 @@ export const products: ProductData[] = [
     stock: '25',
     price: '640',
     year: '2022',
+    rated: '',
     attributes: {
       color: 'black',
       brand: 'Samsung',
@@ -262,6 +279,7 @@ export const products: ProductData[] = [
     stock: '168',
     price: '1200',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'pink',
       brand: 'Apple',
@@ -277,6 +295,7 @@ export const products: ProductData[] = [
     stock: '168',
     price: '1200',
     year: '2020',
+    rated: '',
     attributes: {
       color: 'purple',
       brand: 'Apple',
@@ -292,6 +311,7 @@ export const products: ProductData[] = [
     stock: '43',
     price: '520',
     year: '2018',
+    rated: 'rated',
     attributes: {
       color: 'gold',
       brand: 'Samsung',
@@ -307,6 +327,7 @@ export const products: ProductData[] = [
     stock: '122',
     price: '700',
     year: '2021',
+    rated: 'rated',
     attributes: {
       color: 'white',
       brand: 'Samsung',

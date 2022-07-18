@@ -63,7 +63,7 @@ export class ProductsUI implements IDataRenderToPage {
       inStock.classList.add('product-in-stock');
       inStock.innerHTML = `In stock: <span class="instock-number">${product.stock}</span>`;
 
-      const cartButton = document.createElement('div') as HTMLDivElement;
+      const cartButton: HTMLDivElement = <HTMLDivElement>document.createElement('div');
       cartButton.classList.add('cart-btn');
       cartButton.innerHTML = `<img class = "cart-icon" src = "./img/cartv.png">`;
 
@@ -72,6 +72,12 @@ export class ProductsUI implements IDataRenderToPage {
       description.append(brand, title, attributes, info);
 
       card.append(img, description, cartButton);
+      if (product.rated === 'rated') {
+        const rated: HTMLDivElement = <HTMLDivElement>document.createElement('div');
+        rated.classList.add('rated-label');
+        rated.innerHTML = 'Rated';
+        card.append(rated);
+      }
       result.append(card);
     });
 

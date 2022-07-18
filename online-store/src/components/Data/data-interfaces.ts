@@ -14,6 +14,7 @@ export interface ProductData {
   stock: string;
   price: string;
   year: string;
+  rated: string;
   attributes: AttributesData;
   image: imageData;
 }

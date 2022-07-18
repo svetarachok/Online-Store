@@ -7,6 +7,7 @@ import * as noUiSlider from 'nouislider';
 import { RangeFilters } from './components/Filters/RangeFilters';
 import { Sort } from './components/Sort/Sort';
 import { Search } from './components/Search';
+import { Rated } from './components/Rated';
 
 const cardsSection: HTMLElement = document.querySelector('.products__section') as HTMLElement;
 const colorFilterInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>('.color');
@@ -15,13 +16,32 @@ const memoryFilterInputs: NodeListOf<HTMLInputElement> = document.querySelectorA
 
 const cardsData = new ProductsUI(products);
 const attributesFilter = new AttributesFilter(products, []);
-const cart = new Cart();
-const cartButtons: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('.cart-btn');
 
 //render products data to Cards
 
 const cards = cardsData.displayCards(products);
 cardsSection.append(cards);
+
+//Add to cart
+
+const cart = new Cart();
+const cartButtons: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('.cart-btn');
+
+cartButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    cart.addToCart(button);
+    console.log(button);
+    const parent: HTMLDivElement = button.parentElement as HTMLDivElement;
+    const img: HTMLImageElement = parent.querySelector('.product-img') as HTMLImageElement;
+    if (button.classList.contains('added-to-cart')) {
+      img.classList.add('grey');
+      parent.style.background = '#d7d5d5';
+    } else {
+      img.classList.remove('grey');
+      parent.style.background = '#ffffff';
+    }
+  });
+});
 
 // Attributes filters
 [...colorFilterInputs, ...brandFilterInputs, ...memoryFilterInputs].forEach((input) => {
@@ -39,23 +59,9 @@ cardsSection.append(cards);
   });
 });
 
-//Add to cart
+//RAted
 
-cartButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    cart.addToCart(button);
-    console.log(button);
-    const parent: HTMLDivElement = button.parentElement as HTMLDivElement;
-    const img: HTMLImageElement = parent.querySelector('.product-img') as HTMLImageElement;
-    if (button.classList.contains('added-to-cart')) {
-      img.classList.add('grey');
-      parent.style.background = '#d7d5d5';
-    } else {
-      img.classList.remove('grey');
-      parent.style.background = '#ffffff';
-    }
-  });
-});
+const rated = new Rated('rated');
 
 // Range filters
 const stockRangeFilter = document.getElementById('stock-filter-slider') as noUiSlider.target;
@@ -95,6 +101,7 @@ clearButton.addEventListener('click', () => {
   AttributeFilters.forEach((checkbox) => (checkbox.checked = false));
   stockFilter.resetRangeFilter(stockRangeFilter);
   yearFilter.resetRangeFilter(yearRangeFilter);
+  rated.resetRated();
 });
 
 // Search
