@@ -13,7 +13,7 @@ export const products: ProductData[] = [
       memory: '64',
     },
     image: {
-      url: '../img/xiaomi11pro-w.jpg',
+      url: './img/xiaomi11pro-w.jpg',
     },
   },
   {
@@ -28,7 +28,7 @@ export const products: ProductData[] = [
       memory: '128',
     },
     image: {
-      url: '../img/xiaomi12pro-b.jpg',
+      url: './img/xiaomi12pro-b.jpg',
     },
   },
   {
@@ -43,7 +43,7 @@ export const products: ProductData[] = [
       memory: '64',
     },
     image: {
-      url: '../img/iphone-se-w.jpg',
+      url: './img/iphone-se-w.jpg',
     },
   },
   {
@@ -58,7 +58,7 @@ export const products: ProductData[] = [
       memory: '265',
     },
     image: {
-      url: '../img/iphone13pro-max-bl.jpg',
+      url: './img/iphone13pro-max-bl.jpg',
     },
   },
   {
@@ -73,7 +73,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/iphone13pro-max-g.jpg',
+      url: './img/iphone13pro-max-g.jpg',
     },
   },
   {
@@ -88,7 +88,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/galaxy-note-20-ultra-w.jpg',
+      url: './img/galaxy-note-20-ultra-w.jpg',
     },
   },
   {
@@ -103,7 +103,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/xiaomi12pro-g.jpg',
+      url: './img/xiaomi12pro-g.jpg',
     },
   },
   {
@@ -118,7 +118,7 @@ export const products: ProductData[] = [
       memory: '128',
     },
     image: {
-      url: '../img/galaxy-a53-bl.jpg',
+      url: './img/galaxy-a53-bl.jpg',
     },
   },
   {
@@ -133,7 +133,7 @@ export const products: ProductData[] = [
       memory: '128',
     },
     image: {
-      url: '../img/galaxy-a53-g.jpg',
+      url: './img/galaxy-a53-g.jpg',
     },
   },
   {
@@ -148,7 +148,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/iphone13pro-max-gr.jpg',
+      url: './img/iphone13pro-max-gr.jpg',
     },
   },
   {
@@ -163,7 +163,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/iphone13pro-max-b.jpg',
+      url: './img/iphone13pro-max-b.jpg',
     },
   },
   {
@@ -178,7 +178,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/xiaomi12pro-p.jpg',
+      url: './img/xiaomi12pro-p.jpg',
     },
   },
   {
@@ -193,7 +193,7 @@ export const products: ProductData[] = [
       memory: '64',
     },
     image: {
-      url: '../img/xiaomi-mi-11t-b.jpg',
+      url: './img/xiaomi-mi-11t-b.jpg',
     },
   },
   {
@@ -208,7 +208,7 @@ export const products: ProductData[] = [
       memory: '128',
     },
     image: {
-      url: '../img/xiaomi11-lite-b.jpg',
+      url: './img/xiaomi11-lite-b.jpg',
     },
   },
   {
@@ -223,7 +223,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/galaxy-note-20.jpg',
+      url: './img/galaxy-note-20.jpg',
     },
   },
   {
@@ -238,7 +238,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/samsung-flip3-g.jpg',
+      url: './img/samsung-flip3-g.jpg',
     },
   },
   {
@@ -253,7 +253,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/samsung-flip3-b.jpg',
+      url: './img/samsung-flip3-b.jpg',
     },
   },
   {
@@ -268,7 +268,7 @@ export const products: ProductData[] = [
       memory: '128',
     },
     image: {
-      url: '../img/iphone13-p.jpg',
+      url: './img/iphone13-p.jpg',
     },
   },
   {
@@ -283,7 +283,7 @@ export const products: ProductData[] = [
       memory: '64',
     },
     image: {
-      url: '../img/iphone12.jpg',
+      url: './img/iphone12.jpg',
     },
   },
   {
@@ -298,7 +298,7 @@ export const products: ProductData[] = [
       memory: '64',
     },
     image: {
-      url: '../img/galaxy-note-fe-g.jpg',
+      url: './img/galaxy-note-fe-g.jpg',
     },
   },
   {
@@ -313,7 +313,7 @@ export const products: ProductData[] = [
       memory: '256',
     },
     image: {
-      url: '../img/galaxy-a53-w.jpg',
+      url: './img/galaxy-a53-w.jpg',
     },
   },
 ];
