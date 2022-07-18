@@ -1,9 +1,8 @@
 import { ProductData, AttributesData } from '../Data/data-interfaces';
 
 export class AttributesFilter {
-  static prevAttributes: string[] = [];
-
-  constructor(public filteredValue: string[] = []) {
+  constructor(public products: ProductData[], public filteredValue: string[] = []) {
+    this.products = products;
     this.filteredValue = filteredValue;
   }
 
@@ -19,7 +18,7 @@ export class AttributesFilter {
   protected check(product: ProductData): boolean {
     const attributes: AttributesData = product.attributes;
     if (this.filteredValue.length !== 0) {
-      for (const [, value] of Object.entries(attributes)) {
+      for (const value of Object.values(attributes)) {
         if (this.filteredValue.indexOf(value.toLowerCase()) != -1) {
           return true;
         }
@@ -28,15 +27,15 @@ export class AttributesFilter {
     return false;
   }
 
-  public filterProducts(products: ProductData[]): ProductData[] {
+  public filterProducts(): ProductData[] {
     const result: ProductData[] = [];
-    for (const product of products) {
+    for (const product of this.products) {
       if (this.check(product)) {
         result.push(product);
       }
     }
     if (result.length === 0) {
-      return products;
+      return this.products;
     } else {
       return result;
     }

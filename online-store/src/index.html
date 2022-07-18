@@ -11,9 +11,7 @@
     <div class="logo">
       Online Store
     </div>
-    <nav class="menu">
-      menu
-    </nav>
+    <p class="warning-cart"></p>
     <div class="cart__container">
       <img src="./img/cart.png" width="30" alt="cart icon">
       <div class="product-in-cart-count">0</div>
@@ -115,9 +113,13 @@
           </div>
         </div>
       </div>
+      <button class="clear-filters">Clear Filters</button>
     </aside>
     <section class="main__section">
       <div class="main__section-sort">
+        <div class="search-container">
+          <input type="search" name="search" id="search" class="search" autofocus="true" autocomplete="off" placeholder="Search">
+        </div>
         <div class="sorting-container">
           <p>Sort Order:</p>
           <select class="sort-order">
@@ -133,7 +135,14 @@
     </section>
   </main>
   <footer class="footer">
-    <p>Footer</p>
+    <div>
+      <div class="author"><a href="https://github.com/svetarachok">By Svetlana Rachok</a></div>
+    </div>
+    <div class="rs-logo">
+      <a href="https://rs.school/js/">
+        <img src="./img/rs_school_logo.png" alt="">
+      </a>
+    </div>
   </footer>
 </body>
 </html>

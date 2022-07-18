@@ -59,7 +59,7 @@ export class RangeFilters {
     });
   }
 
-  public findMinRange(products: ProductData[], searchValue: keyof ProductData) {
+  private findMinRange(products: ProductData[], searchValue: keyof ProductData) {
     const sortedProducts: ProductData[] = products.sort((a, b): number => {
       if (Number(a[searchValue]) > Number(b[searchValue])) {
         return 1;
@@ -74,7 +74,7 @@ export class RangeFilters {
     return Number(number);
   }
 
-  public findMaxRange(products: ProductData[], searchValue: keyof ProductData) {
+  private findMaxRange(products: ProductData[], searchValue: keyof ProductData) {
     const sortedProducts: ProductData[] = products.sort((a, b): number => {
       if (Number(a[searchValue]) < Number(b[searchValue])) {
         return 1;
@@ -88,5 +88,6 @@ export class RangeFilters {
     const number = maxProduct[searchValue];
     return Number(number);
   }
-  // resetRangeFilter() {}
+  // resetRangeFilter() {
+  // }
 }
