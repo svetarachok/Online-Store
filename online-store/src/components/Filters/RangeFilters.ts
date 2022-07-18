@@ -88,6 +88,7 @@ export class RangeFilters {
     const number = maxProduct[searchValue];
     return Number(number);
   }
-  // resetRangeFilter() {
-  // }
+  resetRangeFilter(filterElem: noUiSlider.target) {
+    filterElem.noUiSlider?.reset();
+  }
 }

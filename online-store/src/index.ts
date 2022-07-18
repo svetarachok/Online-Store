@@ -9,18 +9,18 @@ import { Sort } from './components/Sort/Sort';
 import { Search } from './components/Search';
 
 const cardsSection: HTMLElement = document.querySelector('.products__section') as HTMLElement;
-const stockRangeFilter = document.getElementById('stock-filter-slider') as noUiSlider.target;
-const yearRangeFilter = document.getElementById('year-filter-slider') as noUiSlider.target;
 const colorFilterInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>('.color');
 const brandFilterInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>('.brand');
 const memoryFilterInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>('.memory');
 
 const cardsData = new ProductsUI(products);
 const attributesFilter = new AttributesFilter(products, []);
+const cart = new Cart();
+const cartButtons: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('.cart-btn');
 
 //render products data to Cards
 
-let cards = cardsData.displayCards(products);
+const cards = cardsData.displayCards(products);
 cardsSection.append(cards);
 
 // Attributes filters
@@ -33,19 +33,18 @@ cardsSection.append(cards);
       attributesFilter.remove(String(input.value));
     }
     const filtered = attributesFilter.filterProducts();
-    cards = cardsData.displayCards(filtered);
+    const cards = cardsData.displayCards(filtered);
     cardsSection.innerHTML = '';
     cardsSection.append(cards);
   });
 });
 
 //Add to cart
-const cart = new Cart();
-const cartButtons: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('.cart-btn');
 
 cartButtons.forEach((button) => {
   button.addEventListener('click', () => {
     cart.addToCart(button);
+    console.log(button);
     const parent: HTMLDivElement = button.parentElement as HTMLDivElement;
     const img: HTMLImageElement = parent.querySelector('.product-img') as HTMLImageElement;
     if (button.classList.contains('added-to-cart')) {
@@ -59,7 +58,8 @@ cartButtons.forEach((button) => {
 });
 
 // Range filters
-
+const stockRangeFilter = document.getElementById('stock-filter-slider') as noUiSlider.target;
+const yearRangeFilter = document.getElementById('year-filter-slider') as noUiSlider.target;
 const stockFilter = new RangeFilters();
 stockFilter.createRangeFilter(products, '#stock-filter', stockRangeFilter, 'stock');
 stockFilter.handleRangeEvents(stockRangeFilter, '.instock-number');
@@ -93,6 +93,8 @@ clearButton.addEventListener('click', () => {
     ...document.querySelectorAll<HTMLInputElement>('.checkbox-input input'),
   ];
   AttributeFilters.forEach((checkbox) => (checkbox.checked = false));
+  stockFilter.resetRangeFilter(stockRangeFilter);
+  yearFilter.resetRangeFilter(yearRangeFilter);
 });
 
 // Search

@@ -1,5 +1,6 @@
 interface CartInterface {
   addToCart(product: HTMLElement): void;
+  restrictCartItemsQuantity(counter: number): void;
 }
 
 export class Cart implements CartInterface {
@@ -32,7 +33,7 @@ export class Cart implements CartInterface {
     }
   }
 
-  restrictCartItemsQuantity(counter: number) {
+  restrictCartItemsQuantity(counter: number): void {
     const warningContainer: HTMLParagraphElement = document.querySelector('.warning-cart') as HTMLParagraphElement;
     warningContainer.style.fontSize = `${18}px`;
     warningContainer.style.fontWeight = '600';
